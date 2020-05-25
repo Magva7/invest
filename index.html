@@ -44,7 +44,7 @@
       <div id=3>
         <label for="srok">На сколько лет</label><br>
         <input type="range" id="srok" min="1" max="20" step="1" value="10" list="rangeList3" onchange="document.getElementById('rangeValue3').innerHTML = this.value; calcAndOutput()">
-        <datalist id="rangeList2">
+        <datalist id="rangeList3">
           <option value="1" label="1"></option>
           <option value="5" label="5"></option>
           <option value="10" label="10"></option>
@@ -68,10 +68,10 @@
       </div>
 
       
-      <div id=4>
+      <!-- <div id=4>
         <label for="four">Текст 4</label><br>
         <input id="four" type="range" min="0" max="100" step="1" value="50">
-      </div>
+      </div> -->
   </div>
 <p>
   Итого отложил: <span id="outputAllMoney">1000</span><br>

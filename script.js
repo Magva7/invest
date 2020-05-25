@@ -5,10 +5,10 @@ function calcAndOutput(){
     var percentVar = document.getElementById("percent").value;
     
     // Смотрим, что в переменных до цикла
-    console.log ("В startMoneyVar до цикла: "+startMoneyVar);
-    console.log ("В addMoneyVar до цикла: "+addMoneyVar);
-    console.log ("В srokVar до цикла: "+srokVar);
-    console.log ("В percentVar до цикла: "+percentVar);
+    // console.log ("В startMoneyVar до цикла: "+startMoneyVar);
+    // console.log ("В addMoneyVar до цикла: "+addMoneyVar);
+    // console.log ("В srokVar до цикла: "+srokVar);
+    // console.log ("В percentVar до цикла: "+percentVar);
 
     var outputVar = startMoneyVar*1000;
     // outputVar = outputVar*1000 + outputVar*(percentVar/100)/12+addMoneyVar*1000;
@@ -21,14 +21,16 @@ function calcAndOutput(){
         outputVar = outputVar + outputVar*(percentVar/100)/12+addMoneyVar*1000;
         outputVar = Math.round(outputVar);
         // console.log ("В startMoneyVar в цикле: "+startMoneyVar);
-        console.log("Итерация: "+i)
+        // console.log("Итерация: "+i)
     }
     outputVar = Math.round(outputVar);
 
     document.getElementById('outputAllMoney').innerHTML = outputVar; //выводим в элементке с id outputSpan переменную outputAllMoney
     // // console.log("Значение ползунка: "+polzunok1Var); //тестовый вывод в консоль
 
-    
+    var rentaInMounthVar = outputVar*(percentVar/100)/12;
+    rentaInMounthVar = Math.round(rentaInMounthVar);
+    document.getElementById('rentaInMounth').innerHTML = rentaInMounthVar;
 
     
 }
