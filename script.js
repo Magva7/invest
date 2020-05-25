@@ -1,14 +1,8 @@
 function testToConsole(){
-    var polzunok1 = document.getElementById("polzun1").value;
-    // var polzunok1 = document.querySelector('.polzunok1'); //записываем в переменную значение ползунка
-    // console.log("Ползунок изменился!");
-    // console.log("Значение ползунка: "+polzunok1.value);
-    console.log("Значение ползунка: "+polzunok1);
+    var polzunok1Var = document.getElementById("polzun1").value; //сохраняем в переменную значение первого ползунка
+    document.getElementById('outputSpan').innerHTML = polzunok1Var; //выводим в элементке с id outputSpan переменную polzunok1Var
+    // console.log("Значение ползунка: "+polzunok1Var); //тестовый вывод в консоль
+
+    
+
 }
-
-
-
-// var email = document.querySelector('.subscription-email');
-// message.textContent = email.value;
-
-// onchange="document.getElementById('rangeValue').innerHTML = this.value*2; 
