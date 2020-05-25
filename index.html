@@ -8,9 +8,7 @@
     <div id="wrapper">
       <div id=1>
         <label for="one">Сколько тыс. откладываю</label><br>
-        <!-- <input id="one" type="range" min="1" max="50" step="2" value="50"> -->
-
-        <input type="range" id="polzun1" min="5" max="50" step="5" value="25" list="rangeList" onchange="document.getElementById('rangeValue').innerHTML = this.value*2; testToConsole()">
+        <input type="range" id="polzun1" min="5" max="50" step="5" value="25" list="rangeList" onchange="document.getElementById('rangeValue').innerHTML = this.value; testToConsole()">
         <datalist id="rangeList">
           <option value="10" label="10"></option>
           <option value="15" label="15"></option>
@@ -22,19 +20,24 @@
           <option value="45" label="45"></option>
         </datalist>
         <span id="rangeValue">25</span>
-        
       </div>
-      <div>
+
+
+
+      <div id=1>
+        <label for="one">Сколько тыс. откладываю</label><br>
+        <input type="range" id="polzun1" min="5" max="50" step="5" value="25" list="rangeList" onchange="document.getElementById('rangeValue').innerHTML = this.value; testToConsole()">
+        <datalist id="rangeList">
+          <option value="10" label="10"></option>
+          <option value="15" label="15"></option>
+          <option value="20" label="20"></option>
+          <option value="25" label="25"></option>
+          <option value="30" label="30"></option>
+          <option value="35" label="35"></option>
+          <option value="40" label="40"></option>
+          <option value="45" label="45"></option>
+        </datalist>
         <span id="rangeValue">25</span>
-      </div>
-
-      <div>
-        <span id="outputSpan">2554545</span>
-      </div>
-
-      <div id=2>
-        <label for="two">Текст 2</label><br>
-        <input id="two" type="range" min="0" max="100" step="1" value="50">
       </div>
 
       <div id=3>
@@ -47,9 +50,12 @@
         <input id="four" type="range" min="0" max="100" step="1" value="50">
       </div>
   </div>
-    <div>
-      Вывод скрипта
-    </div>
+<p>
+  Итого отложил: 
+  <span id="outputSpan">1000</span>
+</p>
+    
+
 
   <script src="script.js"></script>
   </body>

@@ -15,3 +15,8 @@ div{
 label {
   color: green;
 }
+
+p {
+  margin: 5px;
+  clear: both;
+}
