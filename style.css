@@ -1,0 +1,17 @@
+div{
+  border: 1px solid red;
+  text-align: center;
+  /* width: 50%; */
+  float: left;
+  display: inline-block;
+  margin: 5px;
+}
+
+#wrapper {
+  text-align: center;
+  border: 2px solid black;
+}
+
+label {
+  color: green;
+}
