@@ -115,6 +115,7 @@
     var srokVar = 0;
     var percentVar = 0;
     var outputVar = 0;
+    var rentaInMounthVar = 0;
 
 function calcAndOutput(){
     startMoneyVar = document.getElementById("startMoney").value; //сохраняем в переменную значение первого ползунка
@@ -124,8 +125,6 @@ function calcAndOutput(){
     
     outputVar = startMoneyVar*1000;
 
-    
-
     for (var i=0; i<srokVar*12; i++){
         // console.log(outputVar);
         outputVar = outputVar + outputVar*(percentVar/100)/12+addMoneyVar*1000;
@@ -134,7 +133,7 @@ function calcAndOutput(){
     }
     outputVar = Math.round(outputVar);
 
-    var rentaInMounthVar = outputVar*(percentVar/100)/12;
+    rentaInMounthVar = outputVar*(percentVar/100)/12;
     rentaInMounthVar = Math.round(rentaInMounthVar);
 
     document.getElementById('outputAllMoney').innerHTML = outputVar; //выводим в элементке с id outputSpan переменную outputAllMoney
