@@ -110,13 +110,16 @@
 
 
   <script>
-    var startMoneyVar = 25;
+    var startMoneyVar = 0;
+    var addMoneyVar = 0;
+    var srokVar = 0;
+    var percentVar = 0;
 
 function calcAndOutput(){
     startMoneyVar = document.getElementById("startMoney").value; //сохраняем в переменную значение первого ползунка
-    var addMoneyVar = document.getElementById("addMoney").value;
-    var srokVar = document.getElementById("srok").value;
-    var percentVar = document.getElementById("percent").value;
+    addMoneyVar = document.getElementById("addMoney").value;
+    srokVar = document.getElementById("srok").value;
+    percentVar = document.getElementById("percent").value;
     
     var outputVar = startMoneyVar*1000;
 
