@@ -53,6 +53,7 @@
           <option value="45" label="45"></option>
         </datalist>
         <span id="rangeValue1">25</span>
+        <button onclick="plusStartMoney()">+</button>
       </div>
 
       <div id="2">
@@ -109,8 +110,10 @@
 
 
   <script>
+    var startMoneyVar = 25;
+
 function calcAndOutput(){
-    var startMoneyVar = document.getElementById("startMoney").value; //сохраняем в переменную значение первого ползунка
+    startMoneyVar = document.getElementById("startMoney").value; //сохраняем в переменную значение первого ползунка
     var addMoneyVar = document.getElementById("addMoney").value;
     var srokVar = document.getElementById("srok").value;
     var percentVar = document.getElementById("percent").value;
@@ -120,22 +123,28 @@ function calcAndOutput(){
     
 
     for (var i=0; i<srokVar*12; i++){
-        console.log(outputVar);
+        // console.log(outputVar);
         outputVar = outputVar + outputVar*(percentVar/100)/12+addMoneyVar*1000;
         outputVar = Math.round(outputVar);
 
     }
     outputVar = Math.round(outputVar);
 
-    document.getElementById('outputAllMoney').innerHTML = outputVar; //выводим в элементке с id outputSpan переменную outputAllMoney
-
     var rentaInMounthVar = outputVar*(percentVar/100)/12;
     rentaInMounthVar = Math.round(rentaInMounthVar);
+
+    document.getElementById('outputAllMoney').innerHTML = outputVar; //выводим в элементке с id outputSpan переменную outputAllMoney
     document.getElementById('rentaInMounth').innerHTML = rentaInMounthVar;
    
 }
 
+// console.log(startMoneyVar);
 
+function plusStartMoney (){
+  startMoneyVar = +startMoneyVar + 1;
+  document.getElementById('rangeValue1').innerHTML = startMoneyVar;
+  console.log(startMoneyVar);
+}
   </script>
   </body>
 
